@@ -1,0 +1,81 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Linkedin, Github } from "lucide-react";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white">
+      <section className="flex flex-col items-center justify-center py-20 px-6">
+        <img
+          src="/images/profile.jpg"
+          alt="Jane Doe"
+          className="w-32 h-32 rounded-full shadow-md mb-4"
+        />
+        <h1 className="text-4xl font-bold mb-2">Jane Doe</h1>
+        <p className="text-lg text-center max-w-xl">
+          HRIS Specialist with a passion for people, processes, and technology.
+          Helping organizations optimize their HR operations through data-driven solutions.
+        </p>
+        <div className="flex gap-4 mt-4">
+          <a href="mailto:jane.doe@example.com"><Mail /></a>
+          <a href="https://linkedin.com/in/janedoe" target="_blank"><Linkedin /></a>
+          <a href="https://github.com/janedoe" target="_blank"><Github /></a>
+        </div>
+      </section>
+
+      <section className="px-6 py-12 bg-white dark:bg-gray-800 w-full">
+        <h2 className="text-3xl font-semibold mb-6 text-center">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">HR Dashboard</h3>
+              <p className="mb-2 text-sm">
+                A real-time dashboard built with Power BI and Excel automation to track employee turnover, diversity metrics, and headcount.
+              </p>
+              <p className="text-xs text-gray-500">Tech: Power BI, Excel, SharePoint</p>
+              <a
+                href="https://github.com/janedoe/hr-dashboard"
+                target="_blank"
+                className="text-blue-500 text-sm mt-2 inline-block"
+              >
+                View Project ↗
+              </a>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">Employee Self-Service Portal</h3>
+              <p className="mb-2 text-sm">
+                Designed a self-service portal integrated with HRIS that allows employees to update personal info, request time off, and download pay slips.
+              </p>
+              <p className="text-xs text-gray-500">Tech: Workday, HTML, CSS</p>
+              <a
+                href="https://github.com/janedoe/hr-portal"
+                target="_blank"
+                className="text-blue-500 text-sm mt-2 inline-block"
+              >
+                View Project ↗
+              </a>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="px-6 py-12">
+        <h2 className="text-3xl font-semibold text-center mb-4">Resume</h2>
+        <div className="flex justify-center">
+          <Button asChild>
+            <a href="/Jane-Doe-Resume.pdf" target="_blank">
+              Download PDF
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      <footer className="text-center text-sm text-gray-500 py-6">
+        © 2025 Jane Doe. Built with React and Tailwind CSS.
+      </footer>
+    </main>
+  );
+}
